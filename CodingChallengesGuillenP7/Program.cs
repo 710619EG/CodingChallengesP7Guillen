@@ -5,6 +5,9 @@ class Challenges
 {
     public static void Main(string[] args)
     {
+        Console.WriteLine("Welcome to Ellis's Coding Challanges Project! Type which challange you wish to run. Here is am example \"Challange 4\"\nAvailable challenges:");
+
+
         Console.WriteLine("Pick a number, any number!");
         var input4 = Console.ReadLine();
         int numberToAddTo = int.Parse(input4);
@@ -16,11 +19,11 @@ class Challenges
         Console.WriteLine("And the current?");
         var input6 = Console.ReadLine();
         int numberToUse6 = int.Parse(input6);
-        Console.WriteLine("The Circuit Power is " + MultiplyTwoInts(numberToUse5, numberToUse6));
+        Console.WriteLine("The Circuit Power is " + CircutPower(numberToUse5, numberToUse6));
         Console.WriteLine("How many years have you lived?");
         var input7 = Console.ReadLine();
         int numberToUse7 = int.Parse(input7);
-        Console.WriteLine("Cool, that means you have lived for " + CalAgeInDays(numberToUse7));
+        Console.WriteLine("Cool, that means you have lived for " + CalYearsToDays(numberToUse7));
         Console.WriteLine("Now let's calculate the area");
         Console.WriteLine("What is the base measurment of the triangle?");
         var input8 = Console.ReadLine();
@@ -34,15 +37,16 @@ class Challenges
         int numberToUse10 = int.Parse(input10);
         Console.WriteLine($"Your number is less than or equal to 0." + LessThanOrEqualToZero(numberToUse10));
     }
+
     public static int PlusOne(int numberToAddTo)
     {
         return numberToAddTo + 1;
     }
-    public static int MultiplyTwoInts(int numberToUse5, int numberToUse6)
+    public static int CircutPower(int numberToUse5, int numberToUse6)
     {
         return (numberToUse5 * numberToUse6);
     }
-    public static int CalAgeInDays(int numberToUse7)
+    public static int CalYearsToDays(int numberToUse7)
     {
         return numberToUse7 * 365;
     }
