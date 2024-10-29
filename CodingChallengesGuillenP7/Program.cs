@@ -6,8 +6,8 @@ class Challenges
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to Ellis's Coding Challanges Project! Type which challange you wish to run. Here is am example \"Challange 4\"\nAvailable challenges:");
-
-
+        Console.WriteLine("Challenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7");
+        Console.WriteLine("");
         Console.WriteLine("Pick a number, any number!");
         var input4 = Console.ReadLine();
         int numberToAddTo = int.Parse(input4);
@@ -35,7 +35,7 @@ class Challenges
         Console.WriteLine("Give me a number");
         var input10 = Console.ReadLine();
         int numberToUse10 = int.Parse(input10);
-        Console.WriteLine($"Your number is less than or equal to 0." + LessThanOrEqualToZero(numberToUse10));
+        Console.WriteLine($"Your number is less than or equal to 0. That statement is " + LessThanOrEqualToZero(numberToUse10));
     }
 
     public static int PlusOne(int numberToAddTo)
