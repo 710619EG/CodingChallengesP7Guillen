@@ -10,11 +10,19 @@ class Challenges
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
-        Console.WriteLine("Challenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7");
+        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7");
         Console.WriteLine("");
         string selected = Console.ReadLine();
         switch (selected)
         {
+            case "Challenge 1":
+                Challenge1();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 2":
+                Challenge2();
+                Console.WriteLine("\nEnd of program");
+                break;
             case "Challenge 3":
                 Challenge3();
                 Console.WriteLine("\nEnd of program");
@@ -35,8 +43,12 @@ class Challenges
                 Challenge7();
                 Console.WriteLine("\nEnd of program");
                 break;
+            case "Challenge 8":
+                Challenge8();
+                Console.WriteLine("\nEnd of program");
+                break;
             case "":
-                Console.WriteLine("No input detected! Reopen the program to retry.");
+                Console.WriteLine("No input detected! Restart the program to retry.");
                 Console.WriteLine("\nEnd of program");
                 break;
             default:
@@ -45,6 +57,32 @@ class Challenges
                 break;
         }
 
+    }
+    public static void Challenge1()
+    {
+        Console.WriteLine("Give me the 2 numbers to add. \nFirst number:");
+        var input1 = Console.ReadLine();
+        Console.WriteLine("Second number:");
+        var input2 = Console.ReadLine();
+        int num1 = int.Parse(input1);
+        int num2 = int.Parse(input2);
+        Console.WriteLine($"Your numbers have a combined value of {Sum}");
+        static int Sum(int num1, int num2, int sum)
+        {
+            sum = num1 + num2;
+            return sum;
+        }
+    }
+    public static void Challenge2()
+    {
+        Console.WriteLine("Give me the amount of minutes, I will tell you how long it is in seconds. \nMinutes:");
+        var input3 = Console.ReadLine();
+        int.Parse(input3);
+        Console.WriteLine(input3 +$" minutes is {Convert2Sec} seconds");
+        static int Convert2Sec(int input3)
+        {
+           return input3 * 60;
+        }
     }
     public static void Challenge3()
     {
@@ -108,5 +146,9 @@ class Challenges
         {
         return numberToUse10 <= 0;
         }
+    }
+    public static void Challenge8()
+    {
+        Console.WriteLine("");
     }
 }
