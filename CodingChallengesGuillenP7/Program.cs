@@ -10,9 +10,10 @@ class Challenges
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
-        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7");
+        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9\nChallenge 10\nChallenge 11\nChallenge 12\nChallenge 13");
         Console.WriteLine("");
         string selected = Console.ReadLine();
+        string[] acceptedChallenge1Inputs = {"challenge 1", "chall 1", "chalenge 1", "chal 1", "challenge1", "chall1", "chalenge1", "chal1"};
         switch (selected)
         {
             case "Challenge 1":
@@ -66,22 +67,21 @@ class Challenges
         var input2 = Console.ReadLine();
         int num1 = int.Parse(input1);
         int num2 = int.Parse(input2);
-        Console.WriteLine($"Your numbers have a combined value of {Sum}");
-        static int Sum(int num1, int num2, int sum)
+        Console.WriteLine("Your numbers have a combined value of " + Sum(num1, num2));
+        static int Sum(int num1, int num2)
         {
-            sum = num1 + num2;
-            return sum;
+            return (num1 + num2);
         }
     }
     public static void Challenge2()
     {
-        Console.WriteLine("Give me the amount of minutes, I will tell you how long it is in seconds. \nMinutes:");
+        Console.WriteLine("Give me the amount of minutes, I will tell you how long it is in seconds.");
         var input3 = Console.ReadLine();
-        int.Parse(input3);
-        Console.WriteLine(input3 +$" minutes is {Convert2Sec} seconds");
-        static int Convert2Sec(int input3)
+        int numToUse3 = int.Parse(input3);
+        Console.WriteLine(input3 + $" minutes is {Convert2Sec(numToUse3)} seconds");
+        static int Convert2Sec(int numToUse3)
         {
-           return input3 * 60;
+           return numToUse3 * 60;
         }
     }
     public static void Challenge3()
