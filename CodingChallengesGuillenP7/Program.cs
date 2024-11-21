@@ -9,6 +9,7 @@ class Challenges
 {
     public static void Main(string[] args)
     {
+        repeat:
         Console.WriteLine("Welcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
         Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9\nChallenge 10\nChallenge 11\nChallenge 12\nChallenge 13");
         Console.WriteLine("");
@@ -19,7 +20,7 @@ class Challenges
             case "Challenge 1":
                 Challenge1();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto repeat;
             case "Challenge 2":
                 Challenge2();
                 Console.WriteLine("\nEnd of program");
@@ -48,6 +49,42 @@ class Challenges
                 Challenge8();
                 Console.WriteLine("\nEnd of program");
                 break;
+            case "Challenge 9":
+                Challenge9();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 10":
+                Challenge10();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 11":
+                Challenge11();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 12":
+                Challenge13();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 13":
+                Challenge14();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 14":
+                Challenge15();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "EXIT":
+                Console.WriteLine("Are you sure you want to end the program?");
+                string endOrNoEnd = Console.ReadLine();
+                switch (endOrNoEnd)
+                {
+                    case "Yes":
+                        break;
+                    case "No":
+                        goto repeat;
+                }
+                break;
+                
             case "":
                 Console.WriteLine("No input detected! Restart the program to retry.");
                 Console.WriteLine("\nEnd of program");
@@ -150,5 +187,33 @@ class Challenges
     public static void Challenge8()
     {
         Console.WriteLine("");
+    }
+    public static void Challenge9()
+    {
+        Console.WriteLine();
+    }
+    public static void Challenge10()
+    {
+        Console.WriteLine();
+    }
+    public static void Challenge11()
+    {
+        Console.WriteLine();
+    }
+    public static void Challenge12()
+    {
+        Console.WriteLine();
+    }
+    public static void Challenge13()
+    {
+        Console.WriteLine();
+    }
+    public static void Challenge14()
+    {
+        Console.WriteLine();
+    }
+    public static void Challenge15()
+    {
+        Console.WriteLine();
     }
 }
