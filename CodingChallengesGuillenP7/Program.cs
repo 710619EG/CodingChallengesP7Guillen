@@ -10,16 +10,33 @@ class Challenges
     public static void Main(string[] args)
     {
         repeat:
-        Console.WriteLine("Welcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
+        Console.WriteLine("\nWelcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
         Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9\nChallenge 10\nChallenge 11\nChallenge 12\nChallenge 13");
         Console.WriteLine("");
         string selected = Console.ReadLine();
+
         string[] acceptedChallenge1Inputs = {"challenge 1", "chall 1", "chalenge 1", "chal 1", "challenge1", "chall1", "chalenge1", "chal1"};
-        switch (selected)
+        string challenge = "";
+        void SpellCheck()
+        {
+            foreach (string i in acceptedChallenge1Inputs)
+            {
+                if (selected = acceptedChallenge1Inputs[])
+                {
+                    challenge = "Challenge 1";
+                }
+                else
+                {
+                    challenge = selected;
+                }
+            }
+        }
+        SpellCheck();
+
+        switch (challenge)
         {
             case "Challenge 1":
                 Challenge1();
-                Console.WriteLine("\nEnd of program");
                 goto repeat;
             case "Challenge 2":
                 Challenge2();
@@ -174,7 +191,7 @@ class Challenges
         }
     }
     public static void Challenge7()
-    {
+    { 
         Console.WriteLine("Give me a number");
         var input10 = Console.ReadLine();
         int numberToUse10 = int.Parse(input10);
@@ -186,7 +203,24 @@ class Challenges
     }
     public static void Challenge8()
     {
-        Console.WriteLine("");
+        Console.WriteLine("Input a number");
+        var input1 = Console.ReadLine();
+        int intToUse1 = int.Parse(input1);
+        Console.WriteLine("Input another number");
+        var input2 = Console.ReadLine();
+        int intToUse2 = int.Parse(input2);
+        static bool LessThan100(int intToUse1, int intToUse2)
+        {
+            if ((intToUse1 + intToUse2) < 100)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        Console.WriteLine("Sum is less than 100: " + LessThan100(intToUse1, intToUse2));
     }
     public static void Challenge9()
     {
