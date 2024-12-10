@@ -11,7 +11,7 @@ class Challenges
     {
         repeat:
         Console.WriteLine("\nWelcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
-        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9\nChallenge 10\nChallenge 11\nChallenge 12\nChallenge 13");
+        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)");
         Console.WriteLine("");
         string challenge = Console.ReadLine();
 
@@ -86,6 +86,10 @@ class Challenges
                 break;
             case "Challenge 14":
                 Challenge15();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 18":
+                Challenge18();
                 Console.WriteLine("\nEnd of program");
                 break;
             case "EXIT":
@@ -247,5 +251,15 @@ class Challenges
     public static void Challenge15()
     {
         Console.WriteLine();
+    }
+    public static void Challenge18()
+    {
+        Console.WriteLine("What is you name?");
+        string userName = Console.ReadLine();
+        static string HelloName(string userName)
+        {
+            return "Hello " + userName;
+        }
+        Console.WriteLine(HelloName(userName));
     }
 }
