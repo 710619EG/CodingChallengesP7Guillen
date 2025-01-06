@@ -11,7 +11,7 @@ class Challenges
     {
         repeat:
         Console.WriteLine("\nWelcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
-        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)");
+        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)\nChallenge 21");
         Console.WriteLine("");
         string challenge = Console.ReadLine();
 
@@ -90,6 +90,10 @@ class Challenges
                 break;
             case "Challenge 18":
                 Challenge18();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 21":
+                Challenge21();
                 Console.WriteLine("\nEnd of program");
                 break;
             case "EXIT":
@@ -261,5 +265,64 @@ class Challenges
             return "Hello " + userName;
         }
         Console.WriteLine(HelloName(userName));
+    }
+    public static void Challenge21()
+    {
+        Console.WriteLine("Input a number (1-12)");
+        redo:
+        var input21a = Console.ReadLine();
+        int number21a = int.Parse(input21a);
+        if (number21a < 1)
+        {
+            Console.WriteLine("Invalid, try again");
+            goto redo;
+        }
+        else if (number21a > 12)
+        {
+            Console.WriteLine("Invalid, try again");
+            goto redo;
+        }
+        else
+        {
+            switch (number21a)
+            {
+                case 1:
+                    Console.WriteLine("January");
+                    break;
+                case 2:
+                    Console.WriteLine("February");
+                    break;
+                case 3:
+                    Console.WriteLine("March");
+                    break;
+                case 4:
+                    Console.WriteLine("April");
+                    break;
+                case 5:
+                    Console.WriteLine("May");
+                    break;
+                case 6:
+                    Console.WriteLine("June");
+                    break;
+                case 7:
+                    Console.WriteLine("July");
+                    break;
+                case 8:
+                    Console.WriteLine("August");
+                    break;
+                case 9:
+                    Console.WriteLine("September");
+                    break;
+                case 10:
+                    Console.WriteLine("October");
+                    break;
+                case 11:
+                    Console.WriteLine("November");
+                    break;
+                case 12:
+                    Console.WriteLine("December");
+                    break;
+            }
+        }
     }
 }
