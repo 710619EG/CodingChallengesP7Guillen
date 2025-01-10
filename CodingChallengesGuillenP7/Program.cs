@@ -382,4 +382,33 @@ class Challenges
 
     }
 
-}
+    public static void Challenge22()
+    {
+
+    }
+
+    public static void Challenge23()
+    {
+        Console.WriteLine("How many numbers are in your array?");
+        string lengthNum = Console.ReadLine();
+        int length = int.Parse(lengthNum);
+        int[] numbers = new int[length];
+        Console.WriteLine("Now input the numbers.");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.WriteLine("Element " + (i + 1) + " ");
+            var valueInput = Console.ReadLine();
+            int value = int.Parse(valueInput);
+            numbers[i] = value;
+        }
+        Console.WriteLine("\nTime to find the sum of the absolute value.\n");
+        int sum = 0;
+        foreach (int i in numbers)
+        {
+            int add = Math.Abs(i);
+            sum += add;
+        }
+        Console.WriteLine(sum);
+
+
+    }
