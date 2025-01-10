@@ -9,11 +9,11 @@ class Challenges
 {
     public static void Main(string[] args)
     {
-    repeat:
+    restart:
         Console.WriteLine("\nWelcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
         Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)\nChallenge 21");
         Console.WriteLine("");
-        bonus:
+    bonus:
         string challenge = Console.ReadLine();
 
         string[] acceptedChallenge1Inputs = { "challenge 1", "chall 1", "chalenge 1", "chal 1", "challenge1", "chall1", "chalenge1", "chal1" };
@@ -36,7 +36,7 @@ class Challenges
         {
             case "Challenge 1":
                 Challenge1();
-                goto repeat;
+                goto restart;
             case "Challenge 2":
                 Challenge2();
                 Console.WriteLine("\nEnd of program");
@@ -67,16 +67,16 @@ class Challenges
                 break;
             case "Challenge 9":
                 Challenge9();
-                Console.WriteLine("\nEnd of program");
-                break;
+
+                goto restart;
             case "Challenge 10":
                 Challenge10();
-                Console.WriteLine("\nEnd of program");
-                break;
+
+                goto restart;
             case "Challenge 11":
                 Challenge11();
-                Console.WriteLine("\nEnd of program");
-                break;
+
+                goto restart;
             case "Challenge 12":
                 Challenge13();
                 Console.WriteLine("\nEnd of program");
@@ -112,7 +112,7 @@ class Challenges
                     case "Yes":
                         break;
                     case "No":
-                        goto repeat;
+                        goto restart;
                 }
                 break;
 
@@ -127,6 +127,7 @@ class Challenges
         }
 
     }
+
     public static void Challenge1()
     {
         Console.WriteLine("Give me the 2 numbers to add. \nFirst number:");
@@ -238,7 +239,8 @@ class Challenges
     }
     public static void Challenge9()
     {
-        Console.WriteLine();
+        Console.WriteLine("Work in progress!");
+
     }
     public static void Challenge10()
     {
@@ -334,7 +336,7 @@ class Challenges
         }
     }
 
-    public static void BONUS_Challenge1()
+    public static void Challenge22()
     {
         Console.WriteLine("How many elements are in your array of numbers?");
         string lengthNum = Console.ReadLine();
@@ -343,7 +345,7 @@ class Challenges
         Console.WriteLine("Now input the value of each element");
         for (int i = 0; i < numbers.Length; i++)
         {
-            Console.Write("Element " + (i+1) + " ");
+            Console.Write("Element " + (i + 1) + " ");
             var valueInput = Console.ReadLine();
             int value = int.Parse(valueInput);
             numbers[i] = value;
@@ -356,4 +358,28 @@ class Challenges
         }
 
     }
+
+    public static void BONUS_Challenge1()
+    {
+        Console.WriteLine("How many elements are in your array of numbers?");
+        string lengthNum = Console.ReadLine();
+        int length = int.Parse(lengthNum);
+        int[] numbers = new int[length];
+        Console.WriteLine("Now input the value of each element");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write("Element " + (i + 1) + " ");
+            var valueInput = Console.ReadLine();
+            int value = int.Parse(valueInput);
+            numbers[i] = value;
+        }
+        Console.WriteLine("\nNow to sort the elements from least to greatest value\n");
+        Array.Sort(numbers);
+        foreach (int i in numbers)
+        {
+            Console.WriteLine(i);
+        }
+
+    }
+
 }
