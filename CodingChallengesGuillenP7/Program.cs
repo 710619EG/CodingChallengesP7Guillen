@@ -350,12 +350,11 @@ class Challenges
             int value = int.Parse(valueInput);
             numbers[i] = value;
         }
-        Console.WriteLine("\nNow to sort the elements from least to greatest value\n");
-        Array.Sort(numbers);
-        foreach (int i in numbers)
-        {
-            Console.WriteLine(i);
-        }
+        int min;
+        int max;
+        Console.WriteLine("\n Here are the minimum and maximum numbers\n");
+        Console.WriteLine("Min: " + min);
+        Console.WriteLine("Max: " + max);
 
     }
 
@@ -373,20 +372,14 @@ class Challenges
             int value = int.Parse(valueInput);
             numbers[i] = value;
         }
-        Console.WriteLine("\nNow to sort the elements from least to greatest value\n");
+        Console.WriteLine("\nNow to sort the elements from least to greatest value");
         Array.Sort(numbers);
         foreach (int i in numbers)
         {
-            Console.WriteLine(i);
+            Console.Write(i +", ");
         }
-
+        Console.WriteLine("\n");
     }
-
-    public static void Challenge22()
-    {
-
-    }
-
     public static void Challenge23()
     {
         Console.WriteLine("How many numbers are in your array?");
@@ -412,3 +405,4 @@ class Challenges
 
 
     }
+}
