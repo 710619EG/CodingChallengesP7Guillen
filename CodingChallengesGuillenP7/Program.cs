@@ -97,6 +97,10 @@ class Challenges
                 Challenge21();
                 Console.WriteLine("\nEnd of program");
                 break;
+            case "Challenge 22":
+                Challenge22();
+                Console.WriteLine("\nEnd of program");
+                break;
             case "BONUS Challenge 1":
                 BONUS_Challenge1();
                 Console.WriteLine("\nEnd of program");
@@ -244,7 +248,7 @@ class Challenges
     }
     public static void Challenge10()
     {
-        Console.WriteLine();
+        Console.WriteLine("Doesn't exist");
     }
     public static void Challenge11()
     {
@@ -327,6 +331,7 @@ class Challenges
                     Console.WriteLine("October");
                     break;
                 case 11:
+
                     Console.WriteLine("November");
                     break;
                 case 12:
@@ -335,29 +340,28 @@ class Challenges
             }
         }
     }
-    
-    //public static void Challenge22()
-    //{
-    //    Console.WriteLine("How many elements are in your array of numbers?");
-    //    string lengthNum = Console.ReadLine();
-    //    int length = int.Parse(lengthNum);
-    //    int[] numbers = new int[length];
-    //    Console.WriteLine("Now input the value of each element");
-    //    for (int i = 0; i < numbers.Length; i++)
-    //    {
-    //        Console.Write("Element " + (i + 1) + " ");
-    //        var valueInput = Console.ReadLine();
-    //        int value = int.Parse(valueInput);
-    //        numbers[i] = value;
-    //    }
-    //    int min;
-    //    int max;
-    //    Console.WriteLine("\n Here are the minimum and maximum numbers\n");
-    //    Console.WriteLine("Min: " + min);
-    //    Console.WriteLine("Max: " + max);
 
-    //}
-    
+    public static void Challenge22()
+    {
+        Console.WriteLine("How many elements are in your array of numbers?");
+        string lengthNum = Console.ReadLine();
+        int length = int.Parse(lengthNum);
+        int[] numbers = new int[length];
+        Console.WriteLine("Now input the value of each element");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write("Element " + (i + 1) + ": ");
+            var valueInput = Console.ReadLine();
+            int value = int.Parse(valueInput);
+            numbers[i] = value;
+        } 
+
+        Console.WriteLine("\n Here are the minimum and maximum numbers\n");
+        Console.WriteLine("Min: " + numbers.Min());
+        Console.WriteLine("Max: " + numbers.Max());
+
+    }
+
     public static void BONUS_Challenge1()
     {
         Console.WriteLine("How many elements are in your array of numbers?");
