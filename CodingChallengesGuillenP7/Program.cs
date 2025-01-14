@@ -11,7 +11,7 @@ class Challenges
     {
     restart:
         Console.WriteLine("\nWelcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
-        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)\nChallenge 21");
+        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)\nChallenge 21\nChallenge 21\nChallenge 23\nChallenge 24");
         Console.WriteLine("");
     bonus:
         string challenge = Console.ReadLine();
@@ -99,6 +99,14 @@ class Challenges
                 break;
             case "Challenge 22":
                 Challenge22();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 23":
+                Challenge23();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 24":
+                Challenge24();
                 Console.WriteLine("\nEnd of program");
                 break;
             case "BONUS Challenge 1":
@@ -408,5 +416,17 @@ class Challenges
         Console.WriteLine(sum);
 
 
+    }
+    public static void Challenge24()
+    {
+        Console.WriteLine("Calculating exponents:\n\n");
+        Console.WriteLine("Input the base:");
+        var baseInput = Console.ReadLine();
+        int baseNumber = int.Parse(baseInput);
+        Console.WriteLine("Input the exponent:");
+        var expoInput = Console.ReadLine();
+        int expoNumber = int.Parse(expoInput);
+        baseNumber ^= expoNumber;
+        Console.WriteLine(baseNumber);
     }
 }
