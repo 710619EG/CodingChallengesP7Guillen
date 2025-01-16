@@ -11,7 +11,7 @@ class Challenges
     {
     restart:
         Console.WriteLine("\nWelcome to Ellis's Coding Challanges Project! Type which challange you wish to run.\nAvailable challenges:");
-        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)\nChallenge 21\nChallenge 21\nChallenge 23\nChallenge 24");
+        Console.WriteLine("Challenge 1\nChallenge 2\nChallenge 3\nChallenge 4\nChallenge 5\nChallenge 6\nChallenge 7\nChallenge 8\nChallenge 9   (incomplete)\nChallenge 10  (incomplete)\nChallenge 11  (incomplete)\nChallenge 12  (incomplete)\nChallenge 13  (incomplete)\nChallenge 14  (incomplete)\nChallenge 15  (not available)\nChallenge 16  (not available)\nChallenge 17  (not available)\nChallenge 18\nChallenge 19  (not available)\nChallenge 20  (not available)\nChallenge 21\nChallenge 21\nChallenge 23\nChallenge 24\nChallenge 25");
         Console.WriteLine("");
     bonus:
         string challenge = Console.ReadLine();
@@ -107,6 +107,10 @@ class Challenges
                 break;
             case "Challenge 24":
                 Challenge24();
+                Console.WriteLine("\nEnd of program");
+                break;
+            case "Challenge 25":
+                Challenge25();
                 Console.WriteLine("\nEnd of program");
                 break;
             case "BONUS Challenge 1":
@@ -422,11 +426,32 @@ class Challenges
         Console.WriteLine("Calculating exponents:\n\n");
         Console.WriteLine("Input the base:");
         var baseInput = Console.ReadLine();
-        int baseNumber = int.Parse(baseInput);
+        float baseNumber = float.Parse(baseInput);
         Console.WriteLine("Input the exponent:");
         var expoInput = Console.ReadLine();
-        int expoNumber = int.Parse(expoInput);
-        baseNumber ^= expoNumber;
-        Console.WriteLine(baseNumber);
+        float expoNumber = float.Parse(expoInput);
+        float result = (float)Math.Pow(baseNumber, expoNumber);
+        Console.WriteLine(result);
+    }
+    public static void Challenge25()
+    {
+        Console.WriteLine("How many elements are in your array of numbers?");
+        string lengthNum = Console.ReadLine();
+        int length = int.Parse(lengthNum);
+        int[] numbers = new int[length];
+        Console.WriteLine("Now input the value of each element");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write("Element " + (i + 1) + " ");
+            var valueInput = Console.ReadLine();
+            int value = int.Parse(valueInput);
+            numbers[i] = value;
+        }
+        Console.WriteLine("\nNow to multiply all of the values in this array by the amount of values in the given array");
+        foreach (int i in numbers)
+        {
+            Console.Write((i * length) + ", ");
+        }
+        Console.WriteLine("\n");
     }
 }
