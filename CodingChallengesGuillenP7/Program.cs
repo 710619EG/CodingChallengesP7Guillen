@@ -454,4 +454,11 @@ class Challenges
         }
         Console.WriteLine("\n");
     }
+
+    public void Challenge26()
+    {
+        Console.WriteLine("Today we are finding the hamming distance between two strings");
+
+    }
+
 }
