@@ -113,6 +113,10 @@ class Challenges
                 Challenge25();
                 Console.WriteLine("\nEnd of program");
                 break;
+            case "Challenge 26":
+                Challenge26();
+                Console.WriteLine("\nEnd of program");
+                goto restart;
             case "BONUS Challenge 1":
                 BONUS_Challenge1();
                 Console.WriteLine("\nEnd of program");
@@ -455,10 +459,36 @@ class Challenges
         Console.WriteLine("\n");
     }
 
-    public void Challenge26()
+    public static void Challenge26()
     {
         Console.WriteLine("Today we are finding the hamming distance between two strings");
+        Console.Write("String 1: ");
+        string one = Console.ReadLine();
+        Console.Write("String 2: ");
+        string two = Console.ReadLine();
 
+        int hammingDistance;
+        int a = 0;
+        int b = 0;
+
+        if (one.Length != two.Length)
+        {
+            return;
+        }
+        else if (one.Length == two.Length)
+        {
+            for (int i = 0; i < one.Length; i++)
+            {
+
+                if (one[a] == two[b])
+                {
+                    hammingDistance =+ 1;
+                }
+                a =+ 1;
+                b =+ 1;
+            }
+        }
+        Console.WriteLine(hammingDistance);
     }
 
 }
