@@ -463,31 +463,25 @@ class Challenges
     {
         Console.WriteLine("Today we are finding the hamming distance between two strings");
         Console.Write("String 1: ");
-        string one = Console.ReadLine();
+        string[] one = Console.ReadLine();
         Console.Write("String 2: ");
-        string two = Console.ReadLine();
-
-        int hammingDistance;
+        string[] two = Console.ReadLine();
         int a = 0;
         int b = 0;
-
-        if (one.Length != two.Length)
+        var hammingDistance = 0;
+        if (one.Length == two.Length)
         {
-            return;
-        }
-        else if (one.Length == two.Length)
-        {
-            for (int i = 0; i < one.Length; i++)
+            for (int i = 0; i < one.Length; i++, a = b = b + 1)
             {
 
                 if (one[a] == two[b])
                 {
-                    hammingDistance =+ 1;
+                    hammingDistance = hammingDistance + 1;
                 }
-                a =+ 1;
-                b =+ 1;
+              
             }
-        }
+           
+        }        
         Console.WriteLine(hammingDistance);
     }
 
