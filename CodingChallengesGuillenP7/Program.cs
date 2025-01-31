@@ -36,91 +36,96 @@ class Challenges
         {
             case "Challenge 1":
                 Challenge1();
+                Console.WriteLine("End of Challenge");
                 goto restart;
             case "Challenge 2":
                 Challenge2();
-                Console.WriteLine("\nEnd of program");
-                break;
+                Console.WriteLine("End of Challenge");
+                goto restart;
             case "Challenge 3":
                 Challenge3();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 4":
                 Challenge4();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 5":
                 Challenge5();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 6":
                 Challenge6();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 7":
                 Challenge7();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 8":
                 Challenge8();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 9":
                 Challenge9();
-
+                Console.WriteLine("End of Challenge");
                 goto restart;
             case "Challenge 10":
                 Challenge10();
-
+                Console.WriteLine("End of Challenge");
                 goto restart;
             case "Challenge 11":
                 Challenge11();
-
+                Console.WriteLine("End of Challenge");
                 goto restart;
             case "Challenge 12":
                 Challenge13();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 13":
                 Challenge14();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 14":
                 Challenge15();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "Challenge 18":
                 Challenge18();
-                Console.WriteLine("\nEnd of program");
-                break;
+                Console.WriteLine("\nEnd of Challenge");
+                goto restart;
             case "Challenge 21":
                 Challenge21();
-                Console.WriteLine("\nEnd of program");
-                break;
+                Console.WriteLine("\nEnd of Challenge");
+                goto restart;
             case "Challenge 22":
                 Challenge22();
-                Console.WriteLine("\nEnd of program");
-                break;
+                Console.WriteLine("\nEnd of Challenge");
+                goto restart;
             case "Challenge 23":
                 Challenge23();
-                Console.WriteLine("\nEnd of program");
-                break;
+                Console.WriteLine("\nEnd of Challenge");
+                goto restart;
             case "Challenge 24":
                 Challenge24();
-                Console.WriteLine("\nEnd of program");
-                break;
+                Console.WriteLine("\nEnd of Challenge");
+                goto restart;
             case "Challenge 25":
                 Challenge25();
-                Console.WriteLine("\nEnd of program");
-                break;
+                Console.WriteLine("\nEnd of Challenge");
+                goto restart;
             case "Challenge 26":
                 Challenge26();
-                Console.WriteLine("\nEnd of program");
+                Console.WriteLine("\nEnd of Challenge");
+                goto restart;
+            case "Challenge 27":
+                Challenge27();
+                Console.WriteLine("\nEnd of Challenge");
                 goto restart;
             case "BONUS Challenge 1":
                 BONUS_Challenge1();
                 Console.WriteLine("\nEnd of program");
-                break;
+                goto restart;
             case "BONUS":
                 Console.WriteLine("\nBONUS Challenge 1");
                 goto bonus;
@@ -130,8 +135,10 @@ class Challenges
                 switch (endOrNoEnd)
                 {
                     case "Yes":
+                        Console.WriteLine("\nEnd of program");
                         break;
                     case "No":
+
                         goto restart;
                 }
                 break;
@@ -148,6 +155,34 @@ class Challenges
 
     }
 
+    public static void BONUS_Challenge1()
+    {
+        Console.WriteLine("How many elements are in your array of numbers?");
+        string lengthNum = Console.ReadLine();
+        int length = int.Parse(lengthNum);
+        int[] numbers = new int[length];
+        Console.WriteLine("Now input the value of each element");
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write("Element " + (i + 1) + " ");
+            var valueInput = Console.ReadLine();
+            int value = int.Parse(valueInput);
+            numbers[i] = value;
+        }
+        Console.WriteLine("\nNow to sort the elements from least to greatest value");
+        Array.Sort(numbers);
+        foreach (int i in numbers)
+        {
+            Console.Write(i + ", ");
+        }
+        Console.WriteLine("\n");
+    }
+    public static void BONUS_Challenge2()
+    {
+        Console.WriteLine("Under Construction");
+        Console.WriteLine("https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1.contains?view=net-9.0#system-collections-generic-hashset-1-contains(-0)");
+        HashSet<char> seperateWords = new HashSet<char>();
+    }
     public static void Challenge1()
     {
         Console.WriteLine("Give me the 2 numbers to add. \nFirst number:");
@@ -378,28 +413,6 @@ class Challenges
 
     }
 
-    public static void BONUS_Challenge1()
-    {
-        Console.WriteLine("How many elements are in your array of numbers?");
-        string lengthNum = Console.ReadLine();
-        int length = int.Parse(lengthNum);
-        int[] numbers = new int[length];
-        Console.WriteLine("Now input the value of each element");
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write("Element " + (i + 1) + " ");
-            var valueInput = Console.ReadLine();
-            int value = int.Parse(valueInput);
-            numbers[i] = value;
-        }
-        Console.WriteLine("\nNow to sort the elements from least to greatest value");
-        Array.Sort(numbers);
-        foreach (int i in numbers)
-        {
-            Console.Write(i +", ");
-        }
-        Console.WriteLine("\n");
-    }
     public static void Challenge23()
     {
         Console.WriteLine("How many numbers are in your array?");
@@ -463,9 +476,9 @@ class Challenges
     {
         Console.WriteLine("Today we are finding the hamming distance between two strings");
         Console.Write("String 1: ");
-        string[] one = Console.ReadLine();
+        string one = Console.ReadLine();
         Console.Write("String 2: ");
-        string[] two = Console.ReadLine();
+        string two = Console.ReadLine();
         int a = 0;
         int b = 0;
         var hammingDistance = 0;
@@ -474,7 +487,7 @@ class Challenges
             for (int i = 0; i < one.Length; i++, a = b = b + 1)
             {
 
-                if (one[a] == two[b])
+                if (one[a] != two[b])
                 {
                     hammingDistance = hammingDistance + 1;
                 }
@@ -485,4 +498,8 @@ class Challenges
         Console.WriteLine(hammingDistance);
     }
 
+    public static void Challenge27()
+    {
+        Console.WriteLine("Under Construction. Please come back later.");
+    }
 }
