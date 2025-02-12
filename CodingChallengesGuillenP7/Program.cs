@@ -126,6 +126,10 @@ class Challenges
                 BONUS_Challenge1();
                 Console.WriteLine("\nEnd of program");
                 goto restart;
+            case "BONUS Challenge 2":
+                BONUS_Challenge2();
+                Console.WriteLine("\nEnd of program");
+                goto restart;
             case "BONUS":
                 Console.WriteLine("\nBONUS Challenge 1");
                 goto bonus;
@@ -182,6 +186,15 @@ class Challenges
         Console.WriteLine("Under Construction");
         Console.WriteLine("https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1.contains?view=net-9.0#system-collections-generic-hashset-1-contains(-0)");
         HashSet<char> seperateWords = new HashSet<char>();
+        void DisplaySet(HashSet<char> collection)
+        {
+            Console.Write("{");
+            foreach (int i in collection)
+            {
+                Console.Write(" {0}", i);
+            }
+            Console.WriteLine(" }");
+        }
     }
     public static void Challenge1()
     {
