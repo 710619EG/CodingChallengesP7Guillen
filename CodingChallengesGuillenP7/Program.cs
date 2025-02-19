@@ -5,6 +5,11 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
+class Response
+{
+
+}
+
 class Challenges
 {
     public static void Main(string[] args)
